@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ListMembre.ListeMembre">
+   <children>
+      <TableView fx:id="tableview" layoutX="47.0" layoutY="50.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="124.0" text="MembreID" />
+          <TableColumn fx:id="name" prefWidth="112.0" text="Name" />
+            <TableColumn fx:id="mobile" prefWidth="108.0" text="mobile" />
+            <TableColumn fx:id="email" minWidth="1.0" prefWidth="156.0" text="Email" />
+        </columns>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#refreshM" text="Refresh" />
+                  <MenuItem mnemonicParsing="false" onAction="#deleteM" text="Delete" />
+                  <MenuItem mnemonicParsing="false" onAction="#editM" text="Edit" />
+
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+   </children>
+</AnchorPane>

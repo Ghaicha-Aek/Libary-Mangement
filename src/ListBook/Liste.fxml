@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="rootPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ListBook.Liste">
+   <children>
+      <TableView fx:id="tableview" layoutY="7.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="bookid" prefWidth="126.0" text="BookID" />
+          <TableColumn fx:id="booktitle" minWidth="0.0" prefWidth="147.0" text="BookTitle" />
+            <TableColumn fx:id="author" prefWidth="68.0" text="Author" />
+            <TableColumn fx:id="publisher" prefWidth="140.0" text="Publisher" />
+            <TableColumn fx:id="avail" minWidth="0.0" prefWidth="118.0" text="Avail" />
+        </columns>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                  <MenuItem mnemonicParsing="false" text="Refresh Book" onAction="#refresh"/>
+                <MenuItem mnemonicParsing="false" text="Delete Book" onAction="#Delete"/>
+                  <MenuItem mnemonicParsing="false" text="Edit Book" onAction="#Edit"/>
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+   </children>
+</AnchorPane>
